@@ -32,7 +32,7 @@ def main():
     image = cv2.imread(fpath) / 255.
 
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-    data = prepare_image(image)['image'].to(device)
+    data = prepare_image(image)['image'].to(device).type(torch.float)
     model = load_model(mpath, device)
 
     res = inference(model, data)
