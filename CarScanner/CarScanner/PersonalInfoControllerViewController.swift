@@ -9,11 +9,27 @@
 import UIKit
 
 class PersonalInfoControllerViewController: UIViewController {
-
+    @IBOutlet weak var PersonalToCameraButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
 
-        // Do any additional setup after loading the view.
+            //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
+            //tap.cancelsTouchesInView = false
+
+            view.addGestureRecognizer(tap)
+    }
+    //Calls this function when the tap is recognized.
+    @objc func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }
+    @IBAction func PersonalToCameraButton(_ sender: Any) {
+        
+        // ToDo
+        // load & validate personal info
+        performSegue(withIdentifier: "PersonalToCamera", sender: self)
     }
     
 
