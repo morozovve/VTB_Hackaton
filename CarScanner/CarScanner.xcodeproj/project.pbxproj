@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		57AEE5FB253109DA00A79117 /* Slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AEE5FA253109DA00A79117 /* Slide.swift */; };
+		57AEE5FD25310A0400A79117 /* Slide.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57AEE5FC25310A0400A79117 /* Slide.xib */; };
 		A8CAFA492530E4AE0078C4E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CAFA482530E4AE0078C4E1 /* AppDelegate.swift */; };
 		A8CAFA4B2530E4AE0078C4E1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CAFA4A2530E4AE0078C4E1 /* SceneDelegate.swift */; };
 		A8CAFA4D2530E4AE0078C4E1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CAFA4C2530E4AE0078C4E1 /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		57AEE5FA253109DA00A79117 /* Slide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slide.swift; sourceTree = "<group>"; };
+		57AEE5FC25310A0400A79117 /* Slide.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Slide.xib; sourceTree = "<group>"; };
 		A8CAFA452530E4AE0078C4E1 /* CarScanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarScanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8CAFA482530E4AE0078C4E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8CAFA4A2530E4AE0078C4E1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,10 +63,12 @@
 				A8CAFA482530E4AE0078C4E1 /* AppDelegate.swift */,
 				A8CAFA4A2530E4AE0078C4E1 /* SceneDelegate.swift */,
 				A8CAFA4C2530E4AE0078C4E1 /* ViewController.swift */,
+				57AEE5FA253109DA00A79117 /* Slide.swift */,
 				A8CAFA4E2530E4AE0078C4E1 /* Main.storyboard */,
 				A8CAFA512530E4B30078C4E1 /* Assets.xcassets */,
 				A8CAFA532530E4B30078C4E1 /* LaunchScreen.storyboard */,
 				A8CAFA562530E4B30078C4E1 /* Info.plist */,
+				57AEE5FC25310A0400A79117 /* Slide.xib */,
 			);
 			path = CarScanner;
 			sourceTree = "<group>";
@@ -128,6 +134,7 @@
 				A8CAFA552530E4B30078C4E1 /* LaunchScreen.storyboard in Resources */,
 				A8CAFA522530E4B30078C4E1 /* Assets.xcassets in Resources */,
 				A8CAFA502530E4AE0078C4E1 /* Main.storyboard in Resources */,
+				57AEE5FD25310A0400A79117 /* Slide.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,6 +148,7 @@
 				A8CAFA4D2530E4AE0078C4E1 /* ViewController.swift in Sources */,
 				A8CAFA492530E4AE0078C4E1 /* AppDelegate.swift in Sources */,
 				A8CAFA4B2530E4AE0078C4E1 /* SceneDelegate.swift in Sources */,
+				57AEE5FB253109DA00A79117 /* Slide.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
