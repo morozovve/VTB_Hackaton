@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		57568EDE253246400016FEF2 /* OfferingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57568EDD253246400016FEF2 /* OfferingsViewController.swift */; };
 		57AEE5FF2531C9AD00A79117 /* PersonalInfoControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AEE5FE2531C9AD00A79117 /* PersonalInfoControllerViewController.swift */; };
 		57AEE6012531CCDA00A79117 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AEE6002531CCDA00A79117 /* CameraViewController.swift */; };
 		A8CAFA492530E4AE0078C4E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CAFA482530E4AE0078C4E1 /* AppDelegate.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		57568EDD253246400016FEF2 /* OfferingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferingsViewController.swift; sourceTree = "<group>"; };
 		57AEE5FE2531C9AD00A79117 /* PersonalInfoControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoControllerViewController.swift; sourceTree = "<group>"; };
 		57AEE6002531CCDA00A79117 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		A8CAFA452530E4AE0078C4E1 /* CarScanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarScanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,6 +66,7 @@
 				A8CAFA4A2530E4AE0078C4E1 /* SceneDelegate.swift */,
 				A8CAFA4C2530E4AE0078C4E1 /* ViewController.swift */,
 				A8CAFA4E2530E4AE0078C4E1 /* Main.storyboard */,
+				57568EDD253246400016FEF2 /* OfferingsViewController.swift */,
 				57AEE6002531CCDA00A79117 /* CameraViewController.swift */,
 				A8CAFA512530E4B30078C4E1 /* Assets.xcassets */,
 				A8CAFA532530E4B30078C4E1 /* LaunchScreen.storyboard */,
@@ -146,6 +149,7 @@
 			files = (
 				57AEE5FF2531C9AD00A79117 /* PersonalInfoControllerViewController.swift in Sources */,
 				57AEE6012531CCDA00A79117 /* CameraViewController.swift in Sources */,
+				57568EDE253246400016FEF2 /* OfferingsViewController.swift in Sources */,
 				A8CAFA4D2530E4AE0078C4E1 /* ViewController.swift in Sources */,
 				A8CAFA492530E4AE0078C4E1 /* AppDelegate.swift in Sources */,
 				A8CAFA4B2530E4AE0078C4E1 /* SceneDelegate.swift in Sources */,

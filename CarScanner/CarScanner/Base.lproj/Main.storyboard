@@ -17,43 +17,59 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="top" axis="vertical" distribution="fillProportionally" spacing="89" translatesAutoresizingMaskIntoConstraints="NO" id="caH-fI-BnD">
-                                <rect key="frame" x="46" y="167.00000000000003" width="283.66666666666669" height="490.66666666666674"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="283.66666666666669" placeholderIntrinsicHeight="32" image="icons8-camera-96 (1)" translatesAutoresizingMaskIntoConstraints="NO" id="b8L-El-66M">
-                                        <rect key="frame" x="0.0" y="0.0" width="283.66666666666669" height="32"/>
-                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сфотографируйте автомобиль" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C8d-Mi-npz">
-                                        <rect key="frame" x="0.0" y="120.99999999999999" width="283.66666666666669" height="20.333333333333329"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-offer-hot-price-96" translatesAutoresizingMaskIntoConstraints="NO" id="X08-dc-ftQ">
-                                        <rect key="frame" x="0.0" y="230.33333333333331" width="283.66666666666669" height="32"/>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Получите предложения по кредиту" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KV1-Qf-33W">
-                                        <rect key="frame" x="0.0" y="351.33333333333337" width="283.66666666666669" height="20.333333333333314"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nFz-ry-Bik">
-                                        <rect key="frame" x="0.0" y="460.66666666666663" width="283.66666666666669" height="30"/>
-                                        <state key="normal" title="Продолжить"/>
-                                        <connections>
-                                            <action selector="OnToPersonalButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8JK-vy-xEq"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="283.66666666666669" placeholderIntrinsicHeight="32" image="icons8-camera-96 (1)" translatesAutoresizingMaskIntoConstraints="NO" id="b8L-El-66M">
+                                <rect key="frame" x="46" y="106" width="283.66666666666669" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="283.66666666666669" id="BpC-Gb-gL8"/>
+                                    <constraint firstAttribute="height" constant="120" id="CvY-FJ-fTG"/>
+                                </constraints>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сфотографируйте автомобиль" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C8d-Mi-npz">
+                                <rect key="frame" x="66.000000000000014" y="234" width="244.33333333333337" height="20.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-offer-hot-price-96" translatesAutoresizingMaskIntoConstraints="NO" id="X08-dc-ftQ">
+                                <rect key="frame" x="46" y="282" width="281" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="281" id="VKG-yM-3Ep"/>
+                                    <constraint firstAttribute="height" constant="120" id="lME-2M-JmX"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nFz-ry-Bik">
+                                <rect key="frame" x="143" y="694" width="90" height="30"/>
+                                <state key="normal" title="Продолжить"/>
+                                <connections>
+                                    <action selector="OnToPersonalButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8JK-vy-xEq"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Получите предложения по кредиту" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KV1-Qf-33W">
+                                <rect key="frame" x="45" y="410" width="282.33333333333331" height="20.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="caH-fI-BnD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="123.00000000000003" id="gbm-7q-XPb"/>
-                            <constraint firstItem="caH-fI-BnD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="46" id="oMF-JI-vMQ"/>
+                            <constraint firstItem="b8L-El-66M" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="62" id="2M1-rr-FQr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="C8d-Mi-npz" secondAttribute="trailing" constant="64.666666666666629" id="3Tw-Re-YFa"/>
+                            <constraint firstItem="nFz-ry-Bik" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="143" id="3YU-mk-T0m"/>
+                            <constraint firstItem="X08-dc-ftQ" firstAttribute="top" secondItem="C8d-Mi-npz" secondAttribute="bottom" constant="27.666666666666657" id="6uK-W6-43j"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KV1-Qf-33W" secondAttribute="trailing" constant="47.666666666666686" id="AUk-4z-1A4"/>
+                            <constraint firstItem="KV1-Qf-33W" firstAttribute="top" secondItem="X08-dc-ftQ" secondAttribute="bottom" constant="8" symbolic="YES" id="DHk-VA-LsB"/>
+                            <constraint firstItem="C8d-Mi-npz" firstAttribute="top" secondItem="b8L-El-66M" secondAttribute="bottom" constant="8" symbolic="YES" id="Eab-7x-4c9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nFz-ry-Bik" secondAttribute="trailing" constant="142" id="bGh-Zc-okk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="b8L-El-66M" secondAttribute="trailing" constant="45.333333333333314" id="cNM-GK-aUj"/>
+                            <constraint firstItem="b8L-El-66M" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="46" id="cq0-qm-pCT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="X08-dc-ftQ" secondAttribute="trailing" constant="48" id="lre-PQ-Wd4"/>
+                            <constraint firstItem="KV1-Qf-33W" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="45" id="o6I-4T-haB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nFz-ry-Bik" secondAttribute="bottom" constant="54" id="ofQ-Pq-2P6"/>
+                            <constraint firstItem="X08-dc-ftQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="46" id="rpI-PA-hdK"/>
+                            <constraint firstItem="C8d-Mi-npz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="66" id="thl-fc-2Dr"/>
                         </constraints>
                     </view>
                     <connections>
@@ -64,7 +80,123 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-586" y="-75"/>
+            <point key="canvasLocation" x="-586.39999999999998" y="-75.369458128078819"/>
+        </scene>
+        <!--Offerings View Controller-->
+        <scene sceneID="Ag7-2Z-RTu">
+            <objects>
+                <viewController id="5Q5-sU-MhF" customClass="OfferingsViewController" customModule="CarScanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dLt-vb-pFP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Car name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4JE-O3-2jZ" userLabel="carOffers">
+                                <rect key="frame" x="16" y="104.33333333333333" width="343" height="20.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Кредитные предложения для   " textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="80z-uV-QZZ">
+                                <rect key="frame" x="70" y="44" width="235" height="20.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Цена: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jf0-ED-u9B">
+                                <rect key="frame" x="16" y="401" width="50" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Процентная ставка: 5%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qjK-HU-p6k">
+                                <rect key="frame" x="16" y="430" width="189" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ежемесячный платеж: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DIb-wS-wTQ">
+                                <rect key="frame" x="16" y="593" width="184" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Первоначальный взнос: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Onz-iD-g6A">
+                                <rect key="frame" x="16" y="459" width="197" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="zcK-38-X3U">
+                                <rect key="frame" x="14" y="488" width="347" height="31"/>
+                                <connections>
+                                    <action selector="firstPaymentSliderChanged:" destination="5Q5-sU-MhF" eventType="valueChanged" id="qiC-0x-5SP"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Срок кредита:  12 мес." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4N0-fY-f1b">
+                                <rect key="frame" x="16" y="526" width="181" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="12" minValue="6" maxValue="24" translatesAutoresizingMaskIntoConstraints="NO" id="29p-eF-mg3">
+                                <rect key="frame" x="14" y="555" width="347" height="31"/>
+                                <connections>
+                                    <action selector="loadDurationSliderChanged:" destination="5Q5-sU-MhF" eventType="valueChanged" id="Ojo-Jj-sYk"/>
+                                </connections>
+                            </slider>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iqS-kP-akf">
+                                <rect key="frame" x="16" y="152" width="343" height="193"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="193" id="rFj-0c-oqg"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gQ5-Bt-lsR"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="iqS-kP-akf" firstAttribute="top" secondItem="4JE-O3-2jZ" secondAttribute="bottom" constant="27.333333333333343" id="14h-K4-RIU"/>
+                            <constraint firstItem="DIb-wS-wTQ" firstAttribute="leading" secondItem="gQ5-Bt-lsR" secondAttribute="leading" constant="16" id="46D-7m-zPb"/>
+                            <constraint firstItem="zcK-38-X3U" firstAttribute="top" secondItem="Onz-iD-g6A" secondAttribute="bottom" constant="8" symbolic="YES" id="5E7-Xi-a89"/>
+                            <constraint firstItem="qjK-HU-p6k" firstAttribute="leading" secondItem="gQ5-Bt-lsR" secondAttribute="leading" constant="16" id="5JU-nc-uss"/>
+                            <constraint firstItem="29p-eF-mg3" firstAttribute="leading" secondItem="gQ5-Bt-lsR" secondAttribute="leading" constant="16" id="8xt-Cb-FYf"/>
+                            <constraint firstItem="Onz-iD-g6A" firstAttribute="leading" secondItem="gQ5-Bt-lsR" secondAttribute="leading" constant="16" id="9m1-Dq-Wuf"/>
+                            <constraint firstItem="gQ5-Bt-lsR" firstAttribute="trailing" secondItem="4JE-O3-2jZ" secondAttribute="trailing" constant="16" id="EZX-lO-e4P"/>
+                            <constraint firstItem="Jf0-ED-u9B" firstAttribute="top" secondItem="iqS-kP-akf" secondAttribute="bottom" constant="56" id="F2f-Qi-uiT"/>
+                            <constraint firstItem="qjK-HU-p6k" firstAttribute="top" secondItem="Jf0-ED-u9B" secondAttribute="bottom" constant="8" symbolic="YES" id="KFy-2c-ICa"/>
+                            <constraint firstItem="80z-uV-QZZ" firstAttribute="leading" secondItem="gQ5-Bt-lsR" secondAttribute="leading" constant="70" id="Kph-gj-KwE"/>
+                            <constraint firstItem="29p-eF-mg3" firstAttribute="top" secondItem="4N0-fY-f1b" secondAttribute="bottom" constant="8" symbolic="YES" id="Sz0-Xn-OeL"/>
+                            <constraint firstItem="4N0-fY-f1b" firstAttribute="leading" secondItem="gQ5-Bt-lsR" secondAttribute="leading" constant="16" id="Uk7-OA-Ubw"/>
+                            <constraint firstItem="gQ5-Bt-lsR" firstAttribute="trailing" secondItem="29p-eF-mg3" secondAttribute="trailing" constant="16" id="Yek-U0-bQ5"/>
+                            <constraint firstItem="iqS-kP-akf" firstAttribute="leading" secondItem="gQ5-Bt-lsR" secondAttribute="leading" constant="16" id="ZWg-S6-0Au"/>
+                            <constraint firstItem="4JE-O3-2jZ" firstAttribute="leading" secondItem="gQ5-Bt-lsR" secondAttribute="leading" constant="16" id="eyP-Ei-seY"/>
+                            <constraint firstItem="Jf0-ED-u9B" firstAttribute="leading" secondItem="gQ5-Bt-lsR" secondAttribute="leading" constant="16" id="gv9-UK-hE6"/>
+                            <constraint firstItem="Onz-iD-g6A" firstAttribute="top" secondItem="qjK-HU-p6k" secondAttribute="bottom" constant="8" symbolic="YES" id="iMA-bT-NCk"/>
+                            <constraint firstItem="DIb-wS-wTQ" firstAttribute="top" secondItem="29p-eF-mg3" secondAttribute="bottom" constant="8" symbolic="YES" id="jT8-ZV-GCr"/>
+                            <constraint firstItem="gQ5-Bt-lsR" firstAttribute="trailing" secondItem="80z-uV-QZZ" secondAttribute="trailing" constant="70" id="l3v-FF-UEb"/>
+                            <constraint firstItem="4JE-O3-2jZ" firstAttribute="top" secondItem="80z-uV-QZZ" secondAttribute="bottom" constant="40" id="lE7-m0-QXT"/>
+                            <constraint firstItem="gQ5-Bt-lsR" firstAttribute="trailing" secondItem="iqS-kP-akf" secondAttribute="trailing" constant="16" id="oR6-fU-WGr"/>
+                            <constraint firstItem="80z-uV-QZZ" firstAttribute="top" secondItem="gQ5-Bt-lsR" secondAttribute="top" id="tNO-xp-Ykq"/>
+                            <constraint firstItem="gQ5-Bt-lsR" firstAttribute="trailing" secondItem="zcK-38-X3U" secondAttribute="trailing" constant="16" id="taL-HP-lJi"/>
+                            <constraint firstItem="4N0-fY-f1b" firstAttribute="top" secondItem="zcK-38-X3U" secondAttribute="bottom" constant="8" symbolic="YES" id="vaR-ow-QyC"/>
+                            <constraint firstItem="zcK-38-X3U" firstAttribute="leading" secondItem="gQ5-Bt-lsR" secondAttribute="leading" constant="16" id="y12-4g-5bI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="carImage" destination="iqS-kP-akf" id="ah4-bA-AcG"/>
+                        <outlet property="carOffers" destination="4JE-O3-2jZ" id="3fx-tg-8Gh"/>
+                        <outlet property="carPrice" destination="Jf0-ED-u9B" id="sDS-Ph-pDN"/>
+                        <outlet property="firstPayment" destination="Onz-iD-g6A" id="JVm-I9-Wo4"/>
+                        <outlet property="firstPaymentSlider" destination="zcK-38-X3U" id="8yx-xS-Sa6"/>
+                        <outlet property="interestRate" destination="qjK-HU-p6k" id="hYk-72-0L8"/>
+                        <outlet property="loanDuraionSlider" destination="29p-eF-mg3" id="rMP-in-Pjm"/>
+                        <outlet property="loanDuration" destination="4N0-fY-f1b" id="rUj-il-VEH"/>
+                        <outlet property="monthlyPayment" destination="DIb-wS-wTQ" id="cS9-uB-Zh6"/>
+                        <outlet property="titleLabel" destination="80z-uV-QZZ" id="zxA-la-f7O"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dTf-aV-xc4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1829.5999999999999" y="-75.369458128078819"/>
         </scene>
         <!--PersonalInfoController-->
         <scene sceneID="fNT-2K-PgG">
@@ -74,69 +206,89 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="49" translatesAutoresizingMaskIntoConstraints="NO" id="wGS-Mz-Hxz">
-                                <rect key="frame" x="36" y="144" width="306.66666666666669" height="560"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Заполнение личной информации" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v4V-FW-CWj">
-                                        <rect key="frame" x="0.0" y="0.0" width="306.66666666666669" height="24"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Имя и фамилия" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HKC-oL-hWD">
-                                        <rect key="frame" x="0.0" y="73" width="306.66666666666669" height="20.333333333333329"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gtP-dA-Og1" userLabel="name">
-                                        <rect key="frame" x="0.0" y="142.33333333333331" width="306.66666666666669" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Уровень зарплаты (тыс. руб / мес.)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0lm-ui-SOe">
-                                        <rect key="frame" x="0.0" y="225.33333333333331" width="306.66666666666669" height="20.333333333333343"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LqE-LW-vV9" userLabel="income">
-                                        <rect key="frame" x="0.0" y="294.66666666666669" width="306.66666666666669" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Стаж (лет)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Vh-bV-jp4">
-                                        <rect key="frame" x="0.0" y="377.66666666666663" width="306.66666666666669" height="20.333333333333314"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oDT-tk-0fH" userLabel="experience">
-                                        <rect key="frame" x="0.0" y="447" width="306.66666666666669" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="edd-kE-1dD">
-                                        <rect key="frame" x="0.0" y="530" width="306.66666666666669" height="30"/>
-                                        <state key="normal" title="Продолжить"/>
-                                        <connections>
-                                            <action selector="PersonalToCameraButton:" destination="2t9-Xt-j7Y" eventType="touchUpInside" id="Dv5-To-YuX"/>
-                                            <segue destination="ZVh-xV-kZu" kind="presentation" identifier="PersonalToCamera" modalPresentationStyle="fullScreen" id="bcn-45-n9U"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Заполнение личной информации" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v4V-FW-CWj">
+                                <rect key="frame" x="34" y="77" width="306.66666666666669" height="24"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="edd-kE-1dD">
+                                <rect key="frame" x="142" y="692" width="90" height="30"/>
+                                <state key="normal" title="Продолжить"/>
+                                <connections>
+                                    <action selector="PersonalToCameraButton:" destination="2t9-Xt-j7Y" eventType="touchUpInside" id="Dv5-To-YuX"/>
+                                    <segue destination="ZVh-xV-kZu" kind="presentation" identifier="PersonalToCamera" modalPresentationStyle="fullScreen" id="bcn-45-n9U"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Имя и фамилия" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HKC-oL-hWD">
+                                <rect key="frame" x="34" y="164" width="306.66666666666669" height="20.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="100000" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gtP-dA-Og1" userLabel="name">
+                                <rect key="frame" x="34" y="304" width="307" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Уровень зарплаты (тыс. руб / мес.)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0lm-ui-SOe">
+                                <rect key="frame" x="34" y="268" width="306.66666666666669" height="20.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Иван Иванов" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LqE-LW-vV9" userLabel="income">
+                                <rect key="frame" x="34" y="199" width="306.66666666666669" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Стаж (лет)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Vh-bV-jp4">
+                                <rect key="frame" x="34" y="372" width="307" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oDT-tk-0fH" userLabel="experience">
+                                <rect key="frame" x="34" y="400" width="307" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="x0o-LT-Li6"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="wGS-Mz-Hxz" firstAttribute="leading" secondItem="x0o-LT-Li6" secondAttribute="leading" constant="36" id="Dlb-7Y-2G4"/>
-                            <constraint firstItem="wGS-Mz-Hxz" firstAttribute="top" secondItem="x0o-LT-Li6" secondAttribute="top" constant="100" id="uXT-hx-Ava"/>
+                            <constraint firstItem="x0o-LT-Li6" firstAttribute="trailing" secondItem="gtP-dA-Og1" secondAttribute="trailing" constant="34" id="39f-cs-wX1"/>
+                            <constraint firstItem="5Vh-bV-jp4" firstAttribute="top" secondItem="gtP-dA-Og1" secondAttribute="bottom" constant="34" id="5oa-9I-zGe"/>
+                            <constraint firstItem="x0o-LT-Li6" firstAttribute="trailing" secondItem="oDT-tk-0fH" secondAttribute="trailing" constant="34" id="6wM-TA-DTn"/>
+                            <constraint firstItem="0lm-ui-SOe" firstAttribute="leading" secondItem="x0o-LT-Li6" secondAttribute="leading" constant="34" id="9kC-M5-Lae"/>
+                            <constraint firstItem="gtP-dA-Og1" firstAttribute="top" secondItem="0lm-ui-SOe" secondAttribute="bottom" constant="15.666666666666686" id="AXD-dJ-84f"/>
+                            <constraint firstItem="x0o-LT-Li6" firstAttribute="trailing" secondItem="v4V-FW-CWj" secondAttribute="trailing" constant="34.333333333333314" id="BC8-Cq-Ijq"/>
+                            <constraint firstItem="LqE-LW-vV9" firstAttribute="leading" secondItem="x0o-LT-Li6" secondAttribute="leading" constant="34" id="EgS-9W-yrl"/>
+                            <constraint firstItem="oDT-tk-0fH" firstAttribute="leading" secondItem="x0o-LT-Li6" secondAttribute="leading" constant="34" id="H3z-Kd-FdU"/>
+                            <constraint firstItem="oDT-tk-0fH" firstAttribute="top" secondItem="5Vh-bV-jp4" secondAttribute="bottom" constant="8" symbolic="YES" id="HDM-M8-QNT"/>
+                            <constraint firstItem="HKC-oL-hWD" firstAttribute="leading" secondItem="x0o-LT-Li6" secondAttribute="leading" constant="34" id="HEI-7K-UQj"/>
+                            <constraint firstItem="5Vh-bV-jp4" firstAttribute="leading" secondItem="x0o-LT-Li6" secondAttribute="leading" constant="34" id="RNt-47-dpf"/>
+                            <constraint firstItem="0lm-ui-SOe" firstAttribute="top" secondItem="LqE-LW-vV9" secondAttribute="bottom" constant="35" id="RcW-66-RZU"/>
+                            <constraint firstItem="x0o-LT-Li6" firstAttribute="trailing" secondItem="LqE-LW-vV9" secondAttribute="trailing" constant="34.333333333333314" id="a73-7u-9Oy"/>
+                            <constraint firstItem="HKC-oL-hWD" firstAttribute="top" secondItem="x0o-LT-Li6" secondAttribute="top" constant="120" id="apZ-PH-aR0"/>
+                            <constraint firstItem="v4V-FW-CWj" firstAttribute="top" secondItem="x0o-LT-Li6" secondAttribute="top" constant="33" id="bOU-FT-OT7"/>
+                            <constraint firstItem="gtP-dA-Og1" firstAttribute="leading" secondItem="x0o-LT-Li6" secondAttribute="leading" constant="34" id="clF-ne-KMH"/>
+                            <constraint firstItem="x0o-LT-Li6" firstAttribute="trailing" secondItem="5Vh-bV-jp4" secondAttribute="trailing" constant="34" id="gkN-Bz-leq"/>
+                            <constraint firstItem="x0o-LT-Li6" firstAttribute="trailing" secondItem="edd-kE-1dD" secondAttribute="trailing" constant="143" id="iYV-dA-74J"/>
+                            <constraint firstItem="LqE-LW-vV9" firstAttribute="top" secondItem="HKC-oL-hWD" secondAttribute="bottom" constant="14.666666666666657" id="maC-Kd-KxX"/>
+                            <constraint firstItem="x0o-LT-Li6" firstAttribute="trailing" secondItem="0lm-ui-SOe" secondAttribute="trailing" constant="34.333333333333314" id="pS6-qr-tMQ"/>
+                            <constraint firstItem="x0o-LT-Li6" firstAttribute="bottom" secondItem="edd-kE-1dD" secondAttribute="bottom" constant="56" id="psi-zL-PnV"/>
+                            <constraint firstItem="v4V-FW-CWj" firstAttribute="leading" secondItem="x0o-LT-Li6" secondAttribute="leading" constant="34" id="qS4-r0-6Vh"/>
+                            <constraint firstItem="edd-kE-1dD" firstAttribute="leading" secondItem="x0o-LT-Li6" secondAttribute="leading" constant="142" id="rQw-5u-rad"/>
+                            <constraint firstItem="x0o-LT-Li6" firstAttribute="trailing" secondItem="HKC-oL-hWD" secondAttribute="trailing" constant="34.333333333333314" id="uPa-By-jf5"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Zvk-PF-E1g"/>
                     <connections>
                         <outlet property="PersonalToCameraButton" destination="edd-kE-1dD" id="gfW-w0-x7I"/>
+                        <outlet property="experience" destination="oDT-tk-0fH" id="eEM-d0-H6M"/>
+                        <outlet property="income" destination="gtP-dA-Og1" id="enz-Kb-gbg"/>
+                        <outlet property="name" destination="LqE-LW-vV9" id="YS2-jk-9W5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tTp-Z2-uwJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -150,13 +302,50 @@
                     <view key="view" contentMode="scaleToFill" id="zLZ-io-Ahi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yv9-rz-1ct">
+                                <rect key="frame" x="16" y="87" width="343" height="559"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pae-3x-Q4J">
+                                <rect key="frame" x="142" y="721" width="90" height="30"/>
+                                <state key="normal" title="Продолжить"/>
+                                <connections>
+                                    <action selector="CameraToCarSearchTap:" destination="ZVh-xV-kZu" eventType="touchUpInside" id="y5S-Ay-kKv"/>
+                                    <segue destination="5Q5-sU-MhF" kind="presentation" identifier="CameraToCarSearch" modalPresentationStyle="fullScreen" id="Vx0-Xc-ki8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8sn-u3-Pgu">
+                                <rect key="frame" x="106" y="670" width="163" height="30"/>
+                                <state key="normal" title="Выбрать изображение"/>
+                                <connections>
+                                    <action selector="chooseImageTap:" destination="ZVh-xV-kZu" eventType="touchUpInside" id="PNx-gn-Nuw"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="PQM-Hd-Btf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PQM-Hd-Btf" firstAttribute="trailing" secondItem="Pae-3x-Q4J" secondAttribute="trailing" constant="143" id="7pe-sX-KLW"/>
+                            <constraint firstItem="PQM-Hd-Btf" firstAttribute="bottom" secondItem="Pae-3x-Q4J" secondAttribute="bottom" constant="27" id="AXf-9N-3qY"/>
+                            <constraint firstItem="8sn-u3-Pgu" firstAttribute="leading" secondItem="PQM-Hd-Btf" secondAttribute="leading" constant="106" id="F6E-D3-CJ4"/>
+                            <constraint firstItem="PQM-Hd-Btf" firstAttribute="trailing" secondItem="yv9-rz-1ct" secondAttribute="trailing" constant="16" id="LZy-61-Oyp"/>
+                            <constraint firstItem="8sn-u3-Pgu" firstAttribute="top" secondItem="yv9-rz-1ct" secondAttribute="bottom" constant="24" id="Pxj-ZJ-thM"/>
+                            <constraint firstItem="yv9-rz-1ct" firstAttribute="leading" secondItem="PQM-Hd-Btf" secondAttribute="leading" constant="16" id="SIO-hN-jcX"/>
+                            <constraint firstItem="Pae-3x-Q4J" firstAttribute="leading" secondItem="PQM-Hd-Btf" secondAttribute="leading" constant="142" id="ScH-Kp-cbE"/>
+                            <constraint firstItem="Pae-3x-Q4J" firstAttribute="top" secondItem="8sn-u3-Pgu" secondAttribute="bottom" constant="21" id="kLm-aa-DvZ"/>
+                            <constraint firstItem="PQM-Hd-Btf" firstAttribute="trailing" secondItem="8sn-u3-Pgu" secondAttribute="trailing" constant="106" id="szv-LJ-UUg"/>
+                            <constraint firstItem="yv9-rz-1ct" firstAttribute="top" secondItem="PQM-Hd-Btf" secondAttribute="top" constant="43" id="zN0-Ry-exv"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="CameraToCarSearch" destination="Pae-3x-Q4J" id="kr5-kr-Znn"/>
+                        <outlet property="carImage" destination="yv9-rz-1ct" id="B1A-pd-AXF"/>
+                        <outlet property="chooseImage" destination="8sn-u3-Pgu" id="ENz-5B-lFe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RkN-Hq-fN4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="996" y="-76"/>
+            <point key="canvasLocation" x="996" y="-76.108374384236456"/>
         </scene>
     </scenes>
     <resources>

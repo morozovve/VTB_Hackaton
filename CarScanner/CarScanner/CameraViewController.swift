@@ -7,190 +7,136 @@
 //
 
 import UIKit
-import AVFoundation
+import Foundation
 
-class CameraViewController: UIViewController {
-    var captureSession : AVCaptureSession!
-    var backCamera : AVCaptureDevice!
-    var backInput : AVCaptureInput!
-    var backOutput : AVCapturePhotoOutput!
-    var previewLayer : AVCaptureVideoPreviewLayer!
-    var image: UIImage!
-    var videoOutput : AVCaptureVideoDataOutput!
+class CameraViewController: UIViewController,  UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    @IBOutlet weak var carImage: UIImageView!
+    @IBOutlet weak var chooseImage: UIButton!
+    @IBOutlet weak var CameraToCarSearch: UIButton!
+    var clientInfo: ClientInfo!
+    var recognizedCar: String = "<No Car>"
     
-    
-    var takePicture = false
-
-    let captureImageButton : UIButton = {
-        let button = UIButton()
-        button.backgroundColor = .white
-        button.tintColor = .white
-        button.layer.cornerRadius = 25
-        button.translatesAutoresizingMaskIntoConstraints = false
-        return button
-    }()
-    @objc func captureImage(_ sender: UIButton?){
-        takePicture = true
+    @IBAction func chooseImageTap(_ sender: Any) {
+        self.showChooseSourceTypeAlertController()
     }
-//    let capturedImageView = CapturedImageView()
-    func setupView(){
-        print("Setting up view....")
-        view.backgroundColor = .black
-        view.addSubview(captureImageButton)
-
-        NSLayoutConstraint.activate([
-           captureImageButton.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
-           captureImageButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -10),
-           captureImageButton.widthAnchor.constraint(equalToConstant: 50),
-           captureImageButton.heightAnchor.constraint(equalToConstant: 50),
-        ])
-
-        captureImageButton.addTarget(self, action: #selector(captureImage(_:)), for: .touchUpInside)
-        print("Setting up view finished")
-    }
-        
-    //MARK:- Permissions
-    func checkPermissions() {
-        let cameraAuthStatus =  AVCaptureDevice.authorizationStatus(for: AVMediaType.video)
-        switch cameraAuthStatus {
-          case .authorized:
-            return
-          case .denied:
-            abort()
-          case .notDetermined:
-            AVCaptureDevice.requestAccess(for: AVMediaType.video, completionHandler:
-            { (authorized) in
-              if(!authorized){
-                abort()
-              }
-            })
-          case .restricted:
-            abort()
-          @unknown default:
-            fatalError()
+    @IBAction func CameraToCarSearchTap(_ sender: Any) {
+        if self.recognizedCar != "<No Car>" {
+            print(self.recognizedCar)
+            performSegue(withIdentifier: "CameraToCarSearch", sender: self)
         }
     }
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if identifier == "CameraToCarSearch" {
+            if self.recognizedCar == "<No Car>" {
+                return false
+            }
+        }
+        return true
+    }
+    
+    func showChooseSourceTypeAlertController() {
+        let photoLibraryAction = UIAlertAction(title: "Choose a Photo", style: .default) { (action) in
+            self.showImagePickerController(sourceType: .photoLibrary)
+        }
+        // ToDo: find out why it doesnt work
+        // let cameraAction = UIAlertAction(title: "Take a New  Photo", style: .default) { (action) in
+        //     self.showImagePickerController(sourceType:  .camera)
+        // }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        let alert = UIAlertController(title: nil, message: nil, preferredStyle: UIAlertController.Style.alert)
+        
+        // add an action (button)
+        alert.addAction(photoLibraryAction)
+        //        alert.addAction(cameraAction)
+        alert.addAction(cancelAction)
+        
+        // show the alert
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    
+    func showImagePickerController(sourceType: UIImagePickerController.SourceType) {
+        let imagePickerController = UIImagePickerController()
+        imagePickerController.delegate = self
+        imagePickerController.allowsEditing = false
+        imagePickerController.sourceType = sourceType
+        present(imagePickerController, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let editedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
+            self.carImage.image = editedImage.withRenderingMode(.alwaysOriginal)
+        } else if let originalImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            self.carImage.image = originalImage.withRenderingMode(.alwaysOriginal)
+        }
+        dismiss(animated: true, completion: nil)
+        self.recognizeCar(image: self.carImage.image!)
+    }
+    
     override func viewDidLoad() {
-        print("view did load started...")
         super.viewDidLoad()
-        self.setupView()
-        print("view did load finished")
+        
         // Do any additional setup after loading the view.
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        self.checkPermissions()
-        self.setupAndStartCaptureSession()
-    }
-    
-    //MARK:- Camera Setup
-    func setupAndStartCaptureSession(){
-        DispatchQueue.global(qos: .userInitiated).async{
-            //init session
-            self.captureSession = AVCaptureSession()
-            //start configuration
-            self.captureSession.beginConfiguration()
-            
-            //session specific configuration
-            if self.captureSession.canSetSessionPreset(.photo) {
-                self.captureSession.sessionPreset = .photo
+    func recognizeCar(image: UIImage) {
+        let data = image.jpegData(compressionQuality: 0.9)!
+        let b64Encoded = data.base64EncodedData(options: Data.Base64EncodingOptions(rawValue: 0))
+        let b64String = String(data: b64Encoded, encoding: String.Encoding.ascii)
+        let headers = [
+          "x-ibm-client-id": "145bbeeb2ced2458ac29ee529cc22452",
+          "content-type": "application/json",
+          "accept": "application/json"
+        ]
+        let parameters = ["content": b64String!] as [String : Any]
+
+        var postData: Data = Data()
+        do {
+            postData = try JSONSerialization.data(withJSONObject: parameters, options: [])
+        } catch {
+            print("Cant json-serialize data")
+        }
+        let request = NSMutableURLRequest(url: NSURL(string: "https://gw.hackathon.vtb.ru/vtb/hackathon/car-recognize")! as URL,
+                                                cachePolicy: .useProtocolCachePolicy,
+                                            timeoutInterval: 10.0)
+        request.httpMethod = "POST"
+        request.allHTTPHeaderFields = headers
+        request.httpBody = postData as Data
+
+        let session = URLSession.shared
+        let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
+          if (error != nil) {
+            print(error!)
+          } else {
+            let httpResponse = response as? HTTPURLResponse
+            let json = try? JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? [String:[String:Any]]
+            print(httpResponse!)
+            var car_name: String = ""
+            var max_prob: Float = 0.0
+            if let dictionary = json!["probabilities"] {
+                for (key, value) in dictionary {
+                    print("key: \(key), value: \(value)")
+                    if (value as! NSNumber).floatValue > max_prob {
+                        car_name = key
+                        max_prob = (value as! NSNumber).floatValue
+                    }
+                }
             }
-            self.captureSession.automaticallyConfiguresCaptureDeviceForWideColor = true
-            
-            //setup inputs
-            self.setupInputs()
-            
-            DispatchQueue.main.async {
-                //setup preview layer
-                self.setupPreviewLayer()
-            }
-            
-            //setup output
-            self.setupOutput()
-            
-            //commit configuration
-            self.captureSession.commitConfiguration()
-            //start running it
-            self.captureSession.startRunning()
-        }
-        print("camera is running")
+            self.recognizedCar = car_name
+            print("Chosen car: \(car_name)")
+          }
+        })
+        dataTask.resume()
     }
 
-    func setupOutput(){
-        videoOutput = AVCaptureVideoDataOutput()
-        let videoQueue = DispatchQueue(label: "videoQueue", qos: .userInteractive)
-        videoOutput.setSampleBufferDelegate(self, queue: videoQueue)
-        
-        if captureSession.canAddOutput(videoOutput) {
-            captureSession.addOutput(videoOutput)
-        } else {
-            fatalError("could not add video output")
-        }
-        
-        videoOutput.connections.first?.videoOrientation = .portrait
-    }
-
-    func setupInputs(){
-        //get back camera
-        if let device = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: .back) {
-            backCamera = device
-        } else {
-            //handle this appropriately for production purposes
-            fatalError("no back camera")
-        }
-        
-        
-        //now we need to create an input objects from our devices
-        guard let bInput = try? AVCaptureDeviceInput(device: backCamera) else {
-            fatalError("could not create input device from back camera")
-        }
-        backInput = bInput
-        if !captureSession.canAddInput(backInput) {
-            fatalError("could not add back camera input to capture session")
-        }
-        
-        //connect back camera input to session
-        captureSession.addInput(backInput)
-    }
     
-    func setupPreviewLayer(){
-        previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
-        view.layer.insertSublayer(previewLayer, below: captureImageButton.layer)
-        previewLayer.frame = self.view.layer.frame
-    }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "CameraToCarSearch"){
+            let VC = segue.destination as! OfferingsViewController
+            VC.clientInfo = self.clientInfo
+            VC.carName = self.recognizedCar
+        }
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
-    */
-}
-
-extension CameraViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
-    func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
-        if !takePicture {
-            return //we have nothing to do with the image buffer
-        }
-        
-        //try and get a CVImageBuffer out of the sample buffer
-        guard let cvBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else {
-            return
-        }
-        
-        //get a CIImage out of the CVImageBuffer
-        let ciImage = CIImage(cvImageBuffer: cvBuffer)
-        
-        //get UIImage out of CIImage
-        let uiImage = UIImage(ciImage: ciImage)
-        
-        DispatchQueue.main.async {
-            self.image = uiImage
-            self.takePicture = false
-        }
-    }
-        
 }
