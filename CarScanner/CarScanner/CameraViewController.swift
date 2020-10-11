@@ -38,10 +38,6 @@ class CameraViewController: UIViewController,  UIImagePickerControllerDelegate, 
         let photoLibraryAction = UIAlertAction(title: "Choose a Photo", style: .default) { (action) in
             self.showImagePickerController(sourceType: .photoLibrary)
         }
-        // ToDo: find out why it doesnt work
-        // let cameraAction = UIAlertAction(title: "Take a New  Photo", style: .default) { (action) in
-        //     self.showImagePickerController(sourceType:  .camera)
-        // }
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         
         let alert = UIAlertController(title: nil, message: nil, preferredStyle: UIAlertController.Style.alert)
